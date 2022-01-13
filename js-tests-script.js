@@ -49,10 +49,12 @@ function turnOvenOn() {
         let userRecipe = prompt('Que voulez-vous cuisiner ?');
         ovenText.textContent = userRecipe + ' est en train de cuire !';
         ovenButton.textContent = "Ne pas toucher, c'est chaud !";
+        ovenTimer.style.visibility = 'visible';
     } else if (ovenButton.textContent === "Ne pas toucher, c'est chaud !") {
         ovenButton.disabled = true;
         ovenButton.textContent = 'RIP';
         ovenText.textContent = 'Vous avez cramé :/';
+        ovenTimer.style.visibility = 'hidden';
     }
 
     function decrementTime() {

@@ -11,6 +11,10 @@ h1 {
     grid-column: 2;
 }
 
+.oven-timer {
+    visibility: hidden;
+}
+
 .house {
     display: flex;
     flex-flow: column wrap;
