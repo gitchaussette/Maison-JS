@@ -1,0 +1,54 @@
+body {
+    margin: 0;
+    width: 100%;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    font-weight: 900;
+    grid-column: 2;
+}
+
+.house {
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.house-flex {
+    display: flex;
+    margin-bottom: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.house-button-margin {
+    margin: 0 4rem 0 4rem;
+}
+
+.house-button-lmargin {
+    margin: 0 0 0 4rem;
+}
+
+.house-button-rmargin {
+    margin: 0 4rem 0 1rem;
+}
+
+.house-p-margin {
+    margin-right: 1rem;
+}
+
+.house-p-bold {
+    font-weight: 900;
+}
+
+.house-p-italic {
+    font-style: italic;
+}
+
+.oven-timer {
+    border: black solid 1px;
+    border-radius: 50%;
+    padding: .25rem;
+}
