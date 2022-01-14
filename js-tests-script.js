@@ -5,6 +5,7 @@ let chairText = document.querySelector('.chair-text');
 
 let ovenButton = document.querySelector('.oven-button');
 let ovenText = document.querySelector('.oven-text');
+let ovenName = document.querySelector('.oven-name')
 
 let fridgeButton = document.querySelector('.fridge-button');
 let fridgeText = document.querySelector('.fridge-text');
@@ -24,6 +25,7 @@ otherHouseGrenadeButton.disabled = true;
 
 chairButton.addEventListener('click', sitOnChair);
 ovenButton.addEventListener('click', turnOvenOn);
+fridgeButton.addEventListener('click', useFridge);
 
 function sitOnChair() {
     if (randomNumber === 10 && chairText.textContent === 'Vous êtes debout') {
@@ -75,4 +77,22 @@ function turnOvenOn() {
     }
 
     setInterval(decrementTime, 1000);
+}
+
+function useFridge() {
+    if (eggsCount !== 0) {
+        eggsCount--;
+        fakeEggsCount = eggsCount + 1;
+        fridgeText.textContent = 'Il y a ' + fakeEggsCount + ' oeufs dans le frigo';
+    } else if (eggsCount === 0 && fridgeText.textContent === 'Il y a 1 oeufs dans le frigo') {
+        fridgeText.textContent = 'Vous avez pris tous les oeufs !';
+        fridgeButton.textContent = 'Faire une omelette';
+    } else if (fridgeButton.textContent === 'Faire une omelette') {
+        fridgeButton.textContent = 'O___O';
+        fridgeButton.disabled = true;
+        ovenButton.textContent = "Ahaha wtf";
+        ovenButton.disabled = true;
+        ovenText.textContent = "Le four s'est transformé en écrevisse et est devenu inutilisable";
+        ovenName.textContent = 'Écrevisse'
+    }
 }
